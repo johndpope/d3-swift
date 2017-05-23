@@ -23,7 +23,7 @@
 
             var w = 500;
             var h = 300;
-            var padding = 20;
+            var padding = 30;
             
             var svg = d3.select("body")
                         .append("svg")
@@ -61,6 +61,35 @@
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "11px")
 			   .attr("fill", "red");
+
+			var xAxis = d3.axisBottom()
+                           .scale(xScale)
+                           .ticks(5)
+                           .tickFormat( d3.format(".1%") );
+
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("fill", "none")
+                .attr("shape-rendering", "crispEdges")
+                .attr("font-family", "sans-serif"); 
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(0," + (h - padding) + ")")
+                .call(xAxis); //Call takes the incoming selection and hands it off to any function.
+                              //Here this means our xAxis function outputs into the "g" group.
+
+            var yAxis = d3.axisLeft()
+                            .scale(yScale)
+                            .ticks(5);
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(" + padding + ",0)")
+                .call(yAxis);
+
+
 
         </script>
     </body>
