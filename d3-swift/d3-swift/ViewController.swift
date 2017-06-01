@@ -15,12 +15,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let d3 = D3()
-        //d3.load("test")
-        d3.load("module")
-        d3.load("document.min")
+        let jsrun = js()
+        jsrun.load("test")
+//        jsrun.load("module")
+//        d3.load("document.min")
+        let bundleLoaded = jsrun.load("bundle")
+        let call = bundleLoaded!.call(withArguments: [])
+       
         
-        let d3Func = d3.jsContext.objectForKeyedSubscript("barChart")!
+        let d3Func = jsrun.jsContext.objectForKeyedSubscript("barChart")!
         
         let result = d3Func.call(withArguments: [[ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ], [500, 100]])
         

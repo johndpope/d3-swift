@@ -21,7 +21,6 @@ var getPath = function(data, dim) {
   return line(data);
 }
 
-var document = ""
 
 var barChart = function(data, dim) {
     const [w, h] = dim;
