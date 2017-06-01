@@ -23,6 +23,8 @@
 		832D98A11EC8D5120008BB25 /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832D989D1EC8D5120008BB25 /* SVGKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		832D98A41EC8EC3A0008BB25 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832D98A31EC8EC3A0008BB25 /* AEXML.framework */; };
 		832D98A51EC8EC3A0008BB25 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832D98A31EC8EC3A0008BB25 /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		834E79A91ED9F6E500EB9DDF /* document.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 834E79A81ED9F6E500EB9DDF /* document.min.js */; };
+		834E79AB1ED9F81500EB9DDF /* module.js in Resources */ = {isa = PBXBuildFile; fileRef = 834E79AA1ED9F81500EB9DDF /* module.js */; };
 		83E2AE441ECE388700B6E7D2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E2AE431ECE388700B6E7D2 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		832D989C1EC8D5120008BB25 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Frameworks/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		832D989D1EC8D5120008BB25 /* SVGKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVGKit.framework; path = Frameworks/SVGKit.framework; sourceTree = "<group>"; };
 		832D98A31EC8EC3A0008BB25 /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AEXML.framework; path = Carthage/Build/iOS/AEXML.framework; sourceTree = "<group>"; };
+		834E79A81ED9F6E500EB9DDF /* document.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = document.min.js; path = "d3-swift/js/document.min.js"; sourceTree = "<group>"; };
+		834E79AA1ED9F81500EB9DDF /* module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = module.js; path = "d3-swift/js/module.js"; sourceTree = "<group>"; };
 		83E2AE431ECE388700B6E7D2 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,8 @@
 			children = (
 				832D98851EC89C110008BB25 /* d3.v4.min.js */,
 				832D98861EC89C110008BB25 /* test.js */,
+				834E79A81ED9F6E500EB9DDF /* document.min.js */,
+				834E79AA1ED9F81500EB9DDF /* module.js */,
 			);
 			name = js;
 			sourceTree = "<group>";
@@ -291,6 +297,8 @@
 				832D98881EC89C110008BB25 /* test.js in Resources */,
 				832D98871EC89C110008BB25 /* d3.v4.min.js in Resources */,
 				832D98391EC786850008BB25 /* LaunchScreen.storyboard in Resources */,
+				834E79AB1ED9F81500EB9DDF /* module.js in Resources */,
+				834E79A91ED9F6E500EB9DDF /* document.min.js in Resources */,
 				832D98361EC786850008BB25 /* Assets.xcassets in Resources */,
 				832D98341EC786850008BB25 /* Main.storyboard in Resources */,
 			);
