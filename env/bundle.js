@@ -7,7 +7,8 @@
 
 
 //http://browserify.org
-var minDocument = require("min-document")
+var minDocument = require("min-document");
+//var d3 = require("d3");
 
 },{"min-document":12}],2:[function(require,module,exports){
 var slice = Array.prototype.slice

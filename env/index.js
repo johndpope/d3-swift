@@ -6,4 +6,5 @@
 
 
 //http://browserify.org
-var minDocument = require("min-document")
+var minDocument = require("min-document");
+//var d3 = require("d3");
