@@ -15,6 +15,33 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "bundle", ofType: "js")
+        var jsSource: String! = try? String(contentsOfFile: path!)
+        jsSource = "var window = this; \(jsSource!)"
+        
+        let jsContext = JSContext()!
+        jsContext.exceptionHandler = { context, exception in
+            Logger.debug("JS Error: \(String(describing: exception?.description))")
+        }
+        
+        jsContext.evaluateScript(jsSource)
+        
+        let d3ScriptPath = Bundle.main.path(forResource: "test", ofType: "js")
+        let d3Script: String! = try? String(contentsOfFile: d3ScriptPath!)
+        jsContext.evaluateScript(d3Script)
+        
+        //Test is the name of the var I am using to try and expose min-document
+        let test = jsContext.objectForKeyedSubscript("test")
+        
+        let barChart = jsContext.objectForKeyedSubscript("barChart")!
+        let chart = barChart.call(withArguments: [[ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ], [500, 100]])
+        
+        return
+        
+        
+        
+        
         let jsrun = js()
         jsrun.load("test")
 //        jsrun.load("module")
