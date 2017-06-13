@@ -21,6 +21,8 @@ var getPath = function(data, dim) {
   return line(data);
 }
 
+var document = require('min-document')
+var d3 = require('d3')
 
 var barChart = function(data, dim) {
     const [w, h] = dim;

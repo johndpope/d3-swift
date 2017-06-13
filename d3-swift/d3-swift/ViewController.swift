@@ -16,14 +16,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "bundle", ofType: "js")
-        var jsSource: String! = try? String(contentsOfFile: path!)
-        jsSource = "var window = this; \(jsSource!)"
-        
         let jsContext = JSContext()!
         jsContext.exceptionHandler = { context, exception in
             Logger.debug("JS Error: \(String(describing: exception?.description))")
         }
+        
+        
+        let path = Bundle.main.path(forResource: "bundle", ofType: "js")
+        var jsSource: String! = try? String(contentsOfFile: path!)
+//        jsSource = "var window = this; \(jsSource!)"
         
         jsContext.evaluateScript(jsSource)
         

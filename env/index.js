@@ -6,5 +6,6 @@
 
 
 //http://browserify.org
+//Is this needed?
 var minDocument = require("min-document");
 //var d3 = require("d3");
